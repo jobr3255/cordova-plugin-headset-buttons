@@ -1,12 +1,39 @@
 {
-  "name": "TemplateProject",
-  "version": "1.0.0",
-  "description": "This is the project created from the template: cordova_template",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "cordova-plugin-mytestplugin",
+  "version": "0.0.1",
+  "description": "An Android Cordova plugin that allows users to display simple Toast messages at the bottom of the screen.",
+  "cordova": {
+    "id": "cordova-plugin-mytestplugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jobr3255/my-test-plugin.git"
   },
   "keywords": [
-    "ecosystem:cordova"
+    "Toast",
+    "Notification",
+    "Message",
+    "Alert",
+    "ecosystem:cordova",
+    "cordova-android"
   ],
-  "license": "ISC"
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Josh Brown <jobr3255@colorado.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jobr3255/my-test-plugin/issues"
+  },
+  "homepage": "https://github.com/jobr3255/my-test-plugin/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
