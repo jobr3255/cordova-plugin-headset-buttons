@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-headset-buttons",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An Android Cordova plugin that allows users to map headset buttons.",
   "cordova": {
     "id": "cordova-plugin-headset-buttons",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jobr3255/cordova-headset-buttons-plugin.git"
+    "url": "git+https://github.com/jobr3255/cordova-plugin-headset-buttons.git"
   },
   "keywords": [
     "Toast",
@@ -29,9 +29,9 @@
   "author": "Josh Brown <jobr3255@colorado.edu>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jobr3255/cordova-headset-buttons-plugin/issues"
+    "url": "https://github.com/jobr3255/cordova-plugin-headset-buttons/issues"
   },
-  "homepage": "https://github.com/jobr3255/cordova-headset-buttons-plugin/",
+  "homepage": "https://github.com/jobr3255/cordova-plugin-headset-buttons/blob/master/README.md",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

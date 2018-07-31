@@ -2,7 +2,7 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
    id="cordova-plugin-headset-buttons"
-   version="0.0.3">
+   version="0.0.4">
 
  <name>HeadsetButtons</name>
  <description>An Android Cordova plugin that allows users to map headset buttons.</description>
@@ -17,7 +17,7 @@
  <platform name="android">
    <config-file target="res/xml/config.xml" parent="/*">
      <feature name="HeadsetButtons">
-       <param name="android-package" value="com.jobr3255.headsetbuttons"/>
+       <param name="android-package" value="com.jobr3255.headsetbuttons.HeadsetButtonsListener"/>
      </feature>
    </config-file>
 

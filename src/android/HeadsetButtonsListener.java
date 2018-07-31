@@ -34,8 +34,8 @@ import android.view.View.OnKeyListener;
 
 public class HeadsetButtonsListener extends CordovaPlugin implements OnKeyListener {
 
-	private static final String VolumeButtonsListener_LOG= "VolumeButtonsListener";
-	private CallbackContext volumeCallbackContext;
+	private static final String LOG= "HeadsetButtons";
+	private CallbackContext buttonCallbackContext;
 
 
 
@@ -47,7 +47,7 @@ public class HeadsetButtonsListener extends CordovaPlugin implements OnKeyListen
 	* 	@author	ManuelDeveloper(manueldeveloper@gmail.com)
 	*/
 	public HeadsetButtonsListener(){
-		volumeCallbackContext= null;
+		buttonCallbackContext= null;
 	}
 
 
@@ -68,29 +68,29 @@ public class HeadsetButtonsListener extends CordovaPlugin implements OnKeyListen
 
 		// Check the action
 		if( action.equals("start") ){
-			Log.d(VolumeButtonsListener_LOG, "Start called");
+			Log.d(LOG, "Start called");
 			// Check if the plugin is listening the volume button events
-			if( this.volumeCallbackContext != null ){
+			if( this.buttonCallbackContext != null ){
 
 				callbackContext.error("Volume buttons listener already running");
 				return true;
 			}
 
 			// Get the reference to the callbacks and start the listening process
-			this.volumeCallbackContext= callbackContext;
+			this.buttonCallbackContext= callbackContext;
 			this.webView.getView().setOnKeyListener(this);
 
 			// Don't return any result now
 			PluginResult pluginResult= new PluginResult(PluginResult.Status.NO_RESULT);
 			pluginResult.setKeepCallback(true);
-			this.volumeCallbackContext.sendPluginResult(pluginResult);
+			this.buttonCallbackContext.sendPluginResult(pluginResult);
 			return true;
 		}
 		else if( action.equals("stop") ){
-			Log.d(VolumeButtonsListener_LOG, "Stop called");
+			Log.d(LOG, "Stop called");
 			// Erase the callbacks reference and stop the listening process
 			sendSignal(new JSONObject(), false); // release status callback in Javascript side
-			this.volumeCallbackContext= null;
+			this.buttonCallbackContext= null;
 			this.webView.getView().setOnKeyListener(null);
 			callbackContext.success();
 			return true;
@@ -156,7 +156,7 @@ public class HeadsetButtonsListener extends CordovaPlugin implements OnKeyListen
 					return true;
 				}
 				catch(JSONException ex){
-					Log.e(VolumeButtonsListener_LOG, ex.getMessage());
+					Log.e(LOG, ex.getMessage());
 				}
 			}
 			else if( keyCode == KeyEvent.KEYCODE_VOLUME_DOWN  ){
@@ -168,7 +168,7 @@ public class HeadsetButtonsListener extends CordovaPlugin implements OnKeyListen
 					return true;
 				}
 				catch(JSONException ex){
-					Log.e(VolumeButtonsListener_LOG, ex.getMessage());
+					Log.e(LOG, ex.getMessage());
 				}
 			}
 			else if( keyCode == KeyEvent.KEYCODE_HEADSETHOOK  ){
@@ -180,10 +180,10 @@ public class HeadsetButtonsListener extends CordovaPlugin implements OnKeyListen
 					return true;
 				}
 				catch(JSONException ex){
-					Log.e(VolumeButtonsListener_LOG, ex.getMessage());
+					Log.e(LOG, ex.getMessage());
 				}
 			}else{
-				Log.d(VolumeButtonsListener_LOG, "Unmapped key received: "+keyCode);
+				Log.d(LOG, "Unmapped key received: "+keyCode);
 			}
 		}
 
@@ -203,10 +203,10 @@ public class HeadsetButtonsListener extends CordovaPlugin implements OnKeyListen
 	*/
 	private void sendSignal(JSONObject info, boolean keepCallback)
 	{
-		if( this.volumeCallbackContext != null ){
+		if( this.buttonCallbackContext != null ){
 			PluginResult result= new PluginResult(PluginResult.Status.OK, info);
 			result.setKeepCallback(keepCallback);
-			this.volumeCallbackContext.sendPluginResult(result);
+			this.buttonCallbackContext.sendPluginResult(result);
 		}
 	}
 }
