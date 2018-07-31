@@ -45,6 +45,11 @@ You can start and stop the listener whenever you want.
 HeadsetButtons.start();
 HeadsetButtons.stop();
 ```
+If you are using ionic make sure to declare the HeadsetButtons variable, outside of any classes, in the file you want to use it in.
+
+```
+declare var HeadsetButtons;
+```
 
 ## Acknowledgments
 
