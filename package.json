@@ -1,16 +1,16 @@
 {
-  "name": "cordova-plugin-mytestplugin",
+  "name": "cordova-plugin-headset-buttons",
   "version": "0.0.1",
-  "description": "An Android Cordova plugin that allows users to display simple Toast messages at the bottom of the screen.",
+  "description": "An Android Cordova plugin that allows users to map headset buttons.",
   "cordova": {
-    "id": "cordova-plugin-mytestplugin",
+    "id": "cordova-plugin-headset-buttons",
     "platforms": [
       "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jobr3255/my-test-plugin.git"
+    "url": "git+https://github.com/jobr3255/cordova-headset-buttons-plugin.git"
   },
   "keywords": [
     "Toast",
@@ -29,9 +29,9 @@
   "author": "Josh Brown <jobr3255@colorado.edu>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jobr3255/my-test-plugin/issues"
+    "url": "https://github.com/jobr3255/cordova-headset-buttons-plugin/issues"
   },
-  "homepage": "https://github.com/jobr3255/my-test-plugin/",
+  "homepage": "https://github.com/jobr3255/cordova-headset-buttons-plugin/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
