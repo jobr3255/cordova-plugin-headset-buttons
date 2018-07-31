@@ -2,72 +2,50 @@
 
 This plugin allows the remapping of the headset buttons. This plugin will also remap the volume buttons on the device itself as well as the headset buttons.
 
+##### Supported platforms
+* Android
+
 ### Installing
 
-Install using npm
+Install from npm
 
 ```
 npm i cordova-plugin-headset-buttons
 ```
 
-And repeat
+Install from github
 
 ```
-until finished
+npm i https://github.com/jobr3255/cordova-plugin-headset-buttons.git
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+## Adding to cordova project
 
 ```
-Give an example
+cordova plugin add cordova-plugin-headset-buttons
 ```
 
-### And coding style tests
+## Using the plugin
 
-Explain what these tests test and why
+Invoke any of the functions through HeadsetButtons.
+
+To get a response from HeadsetButtons you must set a callback before doing anything.
 
 ```
-Give an example
+HeadsetButtons.subscribe(myCallbackFunction);
+
+function myCallbackFunction(info){
+	console.log("Button pressed: " + info.signal);
+}
 ```
 
-## Deployment
+You can start and stop the listener whenever you want.
 
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+```
+HeadsetButtons.start();
+HeadsetButtons.stop();
+```
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* This plugin was built from cordova-plugin-volume-buttons by manueldeveloper

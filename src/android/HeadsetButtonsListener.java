@@ -1,22 +1,3 @@
-/*
-	   Licensed to the Apache Software Foundation (ASF) under one
-	   or more contributor license agreements.  See the NOTICE file
-	   distributed with this work for additional information
-	   regarding copyright ownership.  The ASF licenses this file
-	   to you under the Apache License, Version 2.0 (the
-	   "License"); you may not use this file except in compliance
-	   with the License.  You may obtain a copy of the License at
-
-		 http://www.apache.org/licenses/LICENSE-2.0
-
-	   Unless required by applicable law or agreed to in writing,
-	   software distributed under the License is distributed on an
-	   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-	   KIND, either express or implied.  See the License for the
-	   specific language governing permissions and limitations
-	   under the License.
-*/
-
 package com.jobr3255.headsetbuttons;
 
 import org.apache.cordova.CallbackContext;
@@ -40,11 +21,7 @@ public class HeadsetButtonsListener extends CordovaPlugin implements OnKeyListen
 
 
 	/**
-	* 	Constructor of the VolumeButtonsListener class
-	*
-	* 	@date		27/02/2014
-	* 	@version	0.0.1
-	* 	@author	ManuelDeveloper(manueldeveloper@gmail.com)
+	* 	Constructor of the HeadsetButtonsListener class
 	*/
 	public HeadsetButtonsListener(){
 		buttonCallbackContext= null;
@@ -59,10 +36,6 @@ public class HeadsetButtonsListener extends CordovaPlugin implements OnKeyListen
 	*	@param		callbackContext: CallbackContext object for call back into Javascript
 	*
 	*	@return		"boolean" which indicates if the action is valid (true) or not (false)
-	*
-	* 	@date		10/12/2016
-	* 	@version	0.0.3
-	* 	@author	ManuelDeveloper(manueldeveloper@gmail.com)
 	*/
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 
@@ -102,10 +75,6 @@ public class HeadsetButtonsListener extends CordovaPlugin implements OnKeyListen
 
 	/**
 	* 	Overwritten method for Android application lifecycle. It stops the key events listening process
-	*
-	* 	@date		10/12/2016
-	* 	@version	0.0.3
-	* 	@author	ManuelDeveloper(manueldeveloper@gmail.com)
 	*/
 	public void onDestroy(){
 
@@ -116,10 +85,6 @@ public class HeadsetButtonsListener extends CordovaPlugin implements OnKeyListen
 
 	/**
 	* 	Overwritten method for Android application lifecycle. It stops the key events listening process
-	*
-	* 	@date		10/12/2016
-	* 	@version	0.0.3
-	* 	@author	ManuelDeveloper(manueldeveloper@gmail.com)
 	*/
 	public void onReset(){
 
@@ -136,10 +101,6 @@ public class HeadsetButtonsListener extends CordovaPlugin implements OnKeyListen
 	*	@param		keyEvent: KeyEvent object with the information of the event
 	*
 	*	@return		"boolean" which indicates if the listener has consumed the event (true) or not (false) [Always false to allow that the event spreading]
-	*
-	* 	@date		10/12/2016
-	* 	@version	0.0.3
-	* 	@author	ManuelDeveloper(manueldeveloper@gmail.com)
 	*/
 	public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
 		// Check if the event is equal to KEY_DOWN
@@ -196,10 +157,6 @@ public class HeadsetButtonsListener extends CordovaPlugin implements OnKeyListen
 	*
 	*	@param		info: JSONObject object with the information to send back
 	*	@param		keepCallback: boolean which indicates if there will be more results
-	*
-	* 	@date		27/02/2014
-	* 	@version	0.0.1
-	* 	@author	ManuelDeveloper(manueldeveloper@gmail.com)
 	*/
 	private void sendSignal(JSONObject info, boolean keepCallback)
 	{
