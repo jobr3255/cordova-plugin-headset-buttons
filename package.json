@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-headset-buttons",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "An Android Cordova plugin that allows users to map headset buttons.",
   "cordova": {
     "id": "cordova-plugin-headset-buttons",
